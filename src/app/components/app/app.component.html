@@ -1,0 +1,5 @@
+<div class="tableContainer">
+  <app-currency-table></app-currency-table>
+  <h5>Wybierz widok:</h5>
+  <p-selectButton [options]="themes" [(ngModel)]="currentTheme" (ngModelChange)="themeSet()" optionLabel="name" optionValue="code"></p-selectButton>
+</div>

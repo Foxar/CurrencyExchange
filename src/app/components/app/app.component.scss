@@ -1,0 +1,13 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tableContainer { 
+        min-width: 50%;
+    }
+    
+}
+
+h5{
+    font-family: Arial, sans-serif;
+}
