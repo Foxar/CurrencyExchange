@@ -1,9 +1,5 @@
 import { DOCUMENT } from '@angular/common';
-import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
-import { Table } from 'primeng/table';
-import { Subscription } from 'rxjs';
-import { CurrencyRateModel } from '../../models/currency-rate.model';
-import { CurrencyApiService } from '../../services/currency-api.service';
+import { Component, Inject } from '@angular/core';
 
 
 @Component({
@@ -12,12 +8,7 @@ import { CurrencyApiService } from '../../services/currency-api.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(
-    @Inject(DOCUMENT) private document: Document,
-    private currencyApi: CurrencyApiService,
-  ){
-
-  }
+  constructor(@Inject(DOCUMENT) private document: Document){}
   title = 'kursy';
 
   themes = [
@@ -39,7 +30,7 @@ export class AppComponent {
   }
 
   themeSet(){
-    let themeLink = this.document.getElementById('app-theme') as HTMLLinkElement;
+    const themeLink = this.document.getElementById('app-theme') as HTMLLinkElement;
     if (themeLink) {
       themeLink.href = this.currentTheme + '.css';
   }

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { Table } from 'primeng/table';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Table } from 'primeng/table';
 import { CurrencyRateModel } from '../../models/currency-rate.model';
 import { CurrencyApiService } from '../../services/currency-api.service';
 
@@ -9,7 +9,7 @@ import { CurrencyApiService } from '../../services/currency-api.service';
   templateUrl: './currency-table.component.html',
   styleUrls: ['./currency-table.component.scss']
 })
-export class CurrencyTableComponent {
+export class CurrencyTableComponent implements OnInit, OnDestroy {
   constructor(
     private currencyApi: CurrencyApiService,
   ){}

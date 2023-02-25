@@ -1,7 +1,7 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { catchError, map, Observable, of } from 'rxjs';
 import { MessageService } from 'primeng/api';
-import { catchError, map, Observable, of, tap } from 'rxjs';
 import { CurrencyRateModel } from '../models/currency-rate.model';
 import { CurrencyResponseModel } from '../models/currency-response.model';
 import { currencyResponseMapper } from './currencyResponseMapper';

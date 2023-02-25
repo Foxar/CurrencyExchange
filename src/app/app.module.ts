@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { TableModule } from 'primeng/table';
-import { AppComponent } from './components/app/app.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { CalendarModule } from 'primeng/calendar';
-import { FormsModule } from '@angular/forms';
 import { SelectButtonModule } from 'primeng/selectbutton';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { MessagesModule } from 'primeng/messages';
 import { MessageModule } from 'primeng/message';
 import { MessageService } from 'primeng/api';
+import { AppComponent } from './components/app/app.component';
 import { CurrencyTableComponent } from './components/currency-table/currency-table.component';
 
 const primeNgModules = [
